@@ -6,6 +6,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>My Apps - Coming Soon</title>
+    <script>
+        // Immediately set theme before page renders
+        (function() {
+            const theme = localStorage.getItem('theme') || 
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
@@ -22,7 +30,7 @@
         <ul>
             <li><a href="apps.html">Apps</a></li>
             <li><a href="templates.html">Templates</a></li>
-            <li><a href="#updates">Updates</a></li>
+            <li><a href="updates.html">Updates</a></li>
             <li class="mobile-theme-toggle">
                 <button class="theme-toggle" aria-label="Toggle dark mode">
                     <span class="toggle-track">
@@ -57,6 +65,9 @@
             <div class="coming-soon-subtitle">My apps are brewing...</div>
         </div>
     </main>
+    <div class="copyright">
+        © 2025 nicrpearson. All rights reserved.
+    </div>
     <footer>
         <div class="social-links">
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X">
