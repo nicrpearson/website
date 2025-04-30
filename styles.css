@@ -23,7 +23,7 @@
 html {
     background-color: var(--background-color);
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -39,6 +39,8 @@ body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Add overscroll behavior for iOS */
@@ -996,7 +998,9 @@ footer {
 }
 
 main {
-    transition: none;
+    flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .main-nav.active ~ main {
@@ -1011,7 +1015,7 @@ main {
 
 .updates-container {
     min-height: 100vh;
-    padding: calc(100px + var(--safe-area-inset-top)) 40px calc(100px + var(--safe-area-inset-bottom));
+    padding: calc(140px + var(--safe-area-inset-top)) 40px calc(100px + var(--safe-area-inset-bottom));
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1136,7 +1140,7 @@ main {
 
 @media (max-width: 768px) {
     .updates-container {
-        padding: calc(80px + var(--safe-area-inset-top)) 20px calc(80px + var(--safe-area-inset-bottom));
+        padding: calc(120px + var(--safe-area-inset-top)) 20px calc(80px + var(--safe-area-inset-bottom));
     }
 
     .updates-grid {
@@ -1151,7 +1155,7 @@ main {
 
 @media (max-width: 480px) {
     .updates-container {
-        padding: calc(60px + var(--safe-area-inset-top)) 16px calc(60px + var(--safe-area-inset-bottom));
+        padding: calc(100px + var(--safe-area-inset-top)) 16px calc(60px + var(--safe-area-inset-bottom));
     }
 
     .update-card {
@@ -1329,6 +1333,7 @@ main {
     text-align: center;
     padding: 40px 0;
     width: 100%;
+    margin-top: auto;
 }
 
 @media (max-width: 768px) {
