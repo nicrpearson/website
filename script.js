@@ -1,3 +1,35 @@
+// Page loader functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.querySelector('.page-loader');
+    
+    // Wait for all images to load
+    const images = document.querySelectorAll('img');
+    let imagesLoaded = 0;
+    
+    if (images.length === 0) {
+        // If there are no images, hide loader immediately
+        loader.classList.add('hidden');
+    } else {
+        images.forEach(img => {
+            if (img.complete) {
+                imagesLoaded++;
+            } else {
+                img.addEventListener('load', () => {
+                    imagesLoaded++;
+                    if (imagesLoaded === images.length) {
+                        loader.classList.add('hidden');
+                    }
+                });
+            }
+        });
+        
+        // Fallback: hide loader after 3 seconds max
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 3000);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggles = document.querySelectorAll('.theme-toggle');
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');

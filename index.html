@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
 <body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
     <a href="/" class="site-logo" aria-label="Home">
         <img src="assets/coffee.png" width="40" height="40" alt="Home logo" />
     </a>
@@ -22,7 +28,7 @@
         <ul>
             <li><a href="apps.html">Apps</a></li>
             <li><a href="templates.html">Templates</a></li>
-            <li><a href="#updates">Updates</a></li>
+            <li><a href="updates.html">Updates</a></li>
             <li class="mobile-theme-toggle">
                 <button class="theme-toggle" aria-label="Toggle dark mode">
                     <span class="toggle-track">
@@ -40,13 +46,63 @@
         </button>
     </div>
     <main class="welcome-container">
+        <section class="hero">
+            <h1 class="hero-title">
+                <span class="title-line">Hello, I'm Nic</span>
+                <span class="title-line">A Developer & Designer</span>
+            </h1>
+            <p class="hero-subtitle">Creating elegant and minimal solutions to everyday problems.</p>
+        </section>
+
+        <section class="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I specialize in crafting beautiful, functional digital experiences. With a focus on clean design and intuitive interfaces, I bring ideas to life through code and creativity.</p>
+            </div>
+            <div class="about-image">
+                <img src="assets/me.png" alt="Nic Pearson" class="profile-image">
+            </div>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Work</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="item-image">
+                        <i class="mdi mdi-apple"></i>
+                    </div>
+                    <h3>Apps</h3>
+                    <p>Discover my collection of innovative applications designed to enhance your digital experience.</p>
+                    <a href="apps.html" class="featured-link">View Apps</a>
+                </div>
+                <div class="featured-item">
+                    <div class="item-image">
+                        <i class="mdi mdi-file-document-multiple"></i>
+                    </div>
+                    <h3>Templates</h3>
+                    <p>Explore my curated selection of templates to jumpstart your next project.</p>
+                    <a href="templates.html" class="featured-link">View Templates</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <p>Have a project in mind? Let's create something amazing together.</p>
+            <div class="contact-links">
+                <a href="mailto:nicrpearson@icloud.com" class="contact-link">
+                    <i class="mdi mdi-email"></i>
+                    <span>Email</span>
+                </a>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="social-links">
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X">
                 <img src="assets/x.png" width="20" height="20" alt="X logo" />
             </a>
-            <a href="https://threads.net" target="_blank" rel="noopener noreferrer" aria-label="Threads">
+            <a href="https://www.threads.com/@nicrpearson" target="_blank" rel="noopener noreferrer" aria-label="Threads">
                 <img src="assets/threads.png" width="20" height="20" alt="Threads logo" />
             </a>
             <a href="https://notion.so" target="_blank" rel="noopener noreferrer" aria-label="Notion">
