@@ -6,13 +6,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Welcome</title>
-    <script>
-        // Immediately set the theme to prevent flash
-        (function() {
-            const theme = localStorage.getItem('theme') || 'dark';
-            document.documentElement.setAttribute('data-theme', theme);
-        })();
-    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
@@ -47,72 +40,6 @@
         </button>
     </div>
     <main class="welcome-container">
-        <section class="hero">
-            <h1 class="hero-title">
-                <span class="title-line">Hi, I'm</span>
-                <span class="title-line">Your Name</span>
-            </h1>
-            <p class="hero-subtitle">Full Stack Developer & Designer</p>
-        </section>
-
-        <section class="about">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>I'm a passionate developer with expertise in creating beautiful, functional web applications. With a background in both design and development, I bring a unique perspective to every project.</p>
-                <p>My skills include:</p>
-                <ul class="skills-list">
-                    <li>Frontend Development</li>
-                    <li>UI/UX Design</li>
-                    <li>Backend Development</li>
-                    <li>Mobile Development</li>
-                </ul>
-            </div>
-            <div class="about-image">
-                <div class="portrait-card">
-                    <div class="portrait-placeholder">
-                        <img src="assets/me.png" alt="Portrait" width="100%" height="100%" style="object-fit: cover; border-radius: 20px;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="featured">
-            <h2>Featured Work</h2>
-            <div class="featured-grid">
-                <div class="featured-item">
-                    <div class="item-image">
-                        <span class="mdi mdi-code-braces"></span>
-                    </div>
-                    <h3>Project One</h3>
-                    <p>A modern web application built with cutting-edge technologies.</p>
-                </div>
-                <div class="featured-item">
-                    <div class="item-image">
-                        <span class="mdi mdi-mobile-phone"></span>
-                    </div>
-                    <h3>Project Two</h3>
-                    <p>An innovative mobile app that solves real-world problems.</p>
-                </div>
-                <div class="featured-item">
-                    <div class="item-image">
-                        <span class="mdi mdi-palette"></span>
-                    </div>
-                    <h3>Project Three</h3>
-                    <p>Creative design solutions for modern businesses.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>Get in Touch</h2>
-            <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">
-                    <span class="mdi mdi-email"></span>
-                    Email Me
-                </a>
-            </div>
-        </section>
     </main>
     <footer>
         <div class="social-links">
