@@ -6,6 +6,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>My Apps - Coming Soon</title>
+    <script>
+        // Set theme before page loads to prevent flash
+        const theme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css">
 </head>
@@ -13,6 +19,7 @@
     <a href="/" class="site-logo" aria-label="Home">
         <img src="assets/coffee.png" width="40" height="40" alt="Home logo" />
     </a>
+    <div class="nav-backdrop"></div>
     <button class="hamburger-menu" aria-label="Menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
